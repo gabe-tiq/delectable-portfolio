@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gabriel Tiqui | Physics, Rocketry, Research</title>
+<meta name="description" content="Gabriel Tiqui is a Physics student at the University of Central Florida building high-power rockets and measurement tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --soft:#f4f6f9; --ink:#1b2733; --muted:#5b6773; --line:#e1e6ec; --accent:#2455d6;
+  --serif:"Source Serif 4",Georgia,serif; --sans:"Figtree",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 40px}
+section{padding:88px 0;scroll-margin-top:56px}
+h2{font:600 32px/1.2 var(--serif);margin-bottom:40px}
+h3{font:600 24px/1.25 var(--serif);margin-bottom:12px}
+.muted{color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+.logo{font:600 19px var(--serif);text-decoration:none}
+nav a{margin-left:28px;text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
+h1{font:600 58px/1.05 var(--serif);letter-spacing:-.01em;margin-bottom:20px}
+.lede{font:500 22px/1.45 var(--serif);margin-bottom:20px}
+.hero p.muted{max-width:56ch;margin-bottom:32px}
+.btns a{display:inline-block;padding:11px 22px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;margin-right:12px;border:1.5px solid var(--ink)}
+.btns a.primary{background:var(--ink);color:#fff}
+.btns a:hover{border-color:var(--accent);background:var(--accent);color:#fff}
+.ph{background:var(--soft);overflow:hidden;position:relative}
+.ph img{display:block;width:100%;height:100%;object-fit:cover}
+.ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;z-index:0}
+.ph img{position:relative;z-index:1}
+.headshot{aspect-ratio:4/5;border-radius:6px}
+.banner{aspect-ratio:21/8;border-radius:6px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 2fr;gap:64px}
+.about h2{margin:0}
+.about p+p{margin-top:16px}
+.facts{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:16px}
+.facts dt{color:var(--muted)} .facts dd{margin:0;font-weight:500}
+
+/* projects */
+.project{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
+.project:nth-of-type(even) .ph{order:2}
+.project .ph{aspect-ratio:3/2;border-radius:6px}
+.project .tools{font-size:14px;color:var(--muted);margin-bottom:16px}
+.project dl{display:grid;grid-template-columns:auto 1fr;gap:4px 20px;margin-top:20px;font-size:15px}
+.project dt{color:var(--muted)} .project dd{margin:0;font-weight:500}
+.more{color:var(--accent);font-weight:600;text-decoration:none}
+.more:hover{text-decoration:underline}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:28px 0;border-top:1px solid var(--line)}
+.job .when{color:var(--muted);font-size:15px}
+.job h3{font-size:20px;margin-bottom:2px}
+.job .org{color:var(--muted);margin-bottom:10px}
+.job ul{padding-left:20px} .job li{margin-bottom:4px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery figure .ph{aspect-ratio:4/3;border-radius:6px}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+
+/* contact */
+.contact{background:var(--soft)}
+.contact p{max-width:52ch;margin-bottom:24px}
+.contact a.mail{font:600 28px var(--serif);color:var(--accent);text-decoration:none}
+.contact a.mail:hover{text-decoration:underline}
+.links{margin-top:20px}.links a{margin-right:24px;font-weight:500}
+footer{padding:28px 0;font-size:14px;color:var(--muted)}
+
+@media (max-width:820px){
+  .wrap{padding:0 22px} section{padding:56px 0}
+  .hero .wrap,.about,.project,.job{grid-template-columns:1fr;gap:28px}
+  .project:nth-of-type(even) .ph{order:0}
+  h1{font-size:42px} .gallery{grid-template-columns:1fr 1fr}
+  nav a{margin-left:16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Gabriel Tiqui</a>
+    <nav>
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#gallery">Photos</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Gabriel Tiqui</h1>
+      <p class="lede">Physics student at the University of Central Florida. I build and fly high-power rockets and write software that measures things.</p>
+      <p class="muted">I'm looking for aerospace, propulsion, and research internships. My work spans rocket design and flight testing, onboard data collection, and image analysis for nanophotonics research.</p>
+      <div class="btns">
+        <a class="primary" href="resume.pdf">View resume</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <!-- Replace images/headshot.jpg with your photo (portrait, about 800 x 1000 px) -->
+    <div class="ph headshot" data-label="Add images/headshot.jpg">
+      <img src="images/headshot.jpg" alt="Portrait of Gabriel Tiqui" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <!-- Wide landscape photo from your camera (about 1800 x 700 px) -->
+  <div class="ph banner" data-label="Add images/banner.jpg">
+    <img src="images/banner.jpg" alt="Launch day photo" onerror="this.style.display='none'">
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <h2>About</h2>
+    <div>
+      <p>I'm a Physics major at UCF in Orlando, Florida, with a 3.37 GPA and an expected graduation in May 2028. I like projects where I design something, test it, and check the results against my predictions.</p>
+      <p>My first high-power rocket, Sienna, flew within 3.9% of its simulated apogee. In the Nanophotonic Materials Group at UCF, I helped build a tool that measures nanomaterial rods from electron microscope images in a fraction of the time. I also tutor Physics 1 and work as a gym supervisor.</p>
+      <dl class="facts">
+        <dt>Degree</dt><dd>B.S. Physics, UCF, expected May 2028</dd>
+        <dt>Focus</dt><dd>Rocketry, flight dynamics, data and instrumentation</dd>
+        <dt>Based in</dt><dd>Orlando, FL</dd>
+        <dt>Work authorization</dt><dd>U.S. citizen</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <div class="ph" data-label="Add images/sienna.jpg">
+        <img src="images/sienna.jpg" alt="Sienna, a Level 1 high-power rocket, on the launch pad" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <h3>Sienna, Level 1 high-power rocket</h3>
+        <p class="tools">OpenRocket, RASAero, SolidWorks, CNC, Arduino, C++</p>
+        <p>I designed and built a Level 1 rocket, tuned its fins for stability in simulation, and flew it with an onboard Arduino payload. The payload recorded the flight, and I compared the data to my predictions.</p>
+        <dl>
+          <dt>Motor</dt><dd>Aerotech I140, 334 N·s, single-deploy recovery</dd>
+          <dt>Stability</dt><dd>2.01 calibers, CG and CP 8 in apart</dd>
+          <dt>Apogee</dt><dd>2,117 ft predicted, 2,035 ft flown</dd>
+          <dt>Payload</dt><dd>Barometer, gyroscope, Adalogger</dd>
+        </dl>
+        <!-- Later: link to a full write-up page, e.g. projects/sienna.html -->
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="ph" data-label="Add images/oneclick.png">
+        <img src="images/oneclick.png" alt="OneClick software measuring rods in a scanning electron microscope image" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <h3>OneClick, nanomaterial measurement tool</h3>
+        <p class="tools">Python, Tkinter, NumPy, Fourier filtering</p>
+        <p>As a research assistant, I contributed to a Python app that estimates nanomaterial rod widths from scanning electron microscope images. I used Fourier-based filtering to reduce image noise and calibrated pixel measurements to real lengths.</p>
+        <dl>
+          <dt>Speed</dt><dd>30 s down to 2.5 s per image</dd>
+          <dt>Tested on</dt><dd>25 image sets</dd>
+          <dt>Lab</dt><dd>Nanophotonic Materials Group, UCF</dd>
+        </dl>
+      </div>
+    </article>
+
+    <!-- To add a project, copy one <article class="project"> block above and edit the text and image name. -->
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="when">Aug 2025 – Dec 2025</div>
+      <div>
+        <h3>Undergraduate Research Assistant</h3>
+        <p class="org">Nanophotonic Materials Group, UCF</p>
+        <ul>
+          <li>Helped build OneClick, cutting measurement time from 30 s to 2.5 s per image.</li>
+          <li>Applied NumPy and Fourier filtering to reduce noise across 25 image sets.</li>
+          <li>Presented findings at weekly group meetings.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Apr 2026 – Present</div>
+      <div>
+        <h3>Peer Tutor</h3>
+        <p class="org">Student Academic Resource Center, UCF</p>
+        <ul>
+          <li>Sole tutor for all Physics 1 with Calculus sections, supporting 800 students.</li>
+          <li>Coordinated with professors to match sessions to lecture and exam topics.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Jan 2026 – May 2026</div>
+      <div>
+        <h3>Teaching Assistant, Solar System Astronomy</h3>
+        <p class="org">UCF</p>
+        <ul>
+          <li>Graded assignments and exams for 27 students and gave written feedback.</li>
+          <li>Supported the professor with course logistics and student concerns.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Apr 2026 – Present</div>
+      <div>
+        <h3>Fitness Supervisor</h3>
+        <p class="org">UCF Recreation and Wellness Center</p>
+        <ul><li>Supervise 2-5 fitness staff at a time and keep the gym safe and clean.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2>Photos</h2>
+    <!-- Add photo-1.jpg to photo-6.jpg in the images folder (about 1600 px wide) and edit the captions -->
+    <div class="gallery">
+      <figure><div class="ph" data-label="images/photo-1.jpg"><img src="images/photo-1.jpg" alt="Describe photo 1" onerror="this.style.display='none'"></div><figcaption>Caption 1</figcaption></figure>
+      <figure><div class="ph" data-label="images/photo-2.jpg"><img src="images/photo-2.jpg" alt="Describe photo 2" onerror="this.style.display='none'"></div><figcaption>Caption 2</figcaption></figure>
+      <figure><div class="ph" data-label="images/photo-3.jpg"><img src="images/photo-3.jpg" alt="Describe photo 3" onerror="this.style.display='none'"></div><figcaption>Caption 3</figcaption></figure>
+      <figure><div class="ph" data-label="images/photo-4.jpg"><img src="images/photo-4.jpg" alt="Describe photo 4" onerror="this.style.display='none'"></div><figcaption>Caption 4</figcaption></figure>
+      <figure><div class="ph" data-label="images/photo-5.jpg"><img src="images/photo-5.jpg" alt="Describe photo 5" onerror="this.style.display='none'"></div><figcaption>Caption 5</figcaption></figure>
+      <figure><div class="ph" data-label="images/photo-6.jpg"><img src="images/photo-6.jpg" alt="Describe photo 6" onerror="this.style.display='none'"></div><figcaption>Caption 6</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I'm open to internships and research opportunities in aerospace, propulsion, and applied physics. Email is the fastest way to reach me.</p>
+    <a class="mail" href="mailto:gabrielbennett.tiqui@ucf.edu">gabrielbennett.tiqui@ucf.edu</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/gabriel-tiqui">LinkedIn</a>
+      <a href="resume.pdf">Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Gabriel Tiqui</div>
+</footer>
+
+</body>
+</html>
