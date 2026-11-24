@@ -7,80 +7,80 @@
 <meta name="description" content="Gabriel Tiqui is a Physics student at the University of Central Florida building high-power rockets and measurement tools.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#ffffff; --soft:#f4f6f9; --ink:#1b2733; --muted:#5b6773; --line:#e1e6ec; --accent:#2455d6;
-  --serif:"Source Serif 4",Georgia,serif; --sans:"Figtree",system-ui,sans-serif;
+  --head:"IBM Plex Sans",system-ui,sans-serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+body{background:var(--bg);color:var(--ink);font:400 16.5px/1.65 var(--sans)}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 40px}
 section{padding:88px 0;scroll-margin-top:56px}
-h2{font:600 32px/1.2 var(--serif);margin-bottom:40px}
-h3{font:600 24px/1.25 var(--serif);margin-bottom:12px}
+h2{font:700 30px/1.2 var(--head);letter-spacing:-.01em;margin-bottom:40px}
+h3{font:600 23px/1.25 var(--head);letter-spacing:-.005em;margin-bottom:12px}
 .muted{color:var(--muted)}
 
 /* header */
 header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
-.logo{font:600 19px var(--serif);text-decoration:none}
+.logo{font:700 18px var(--head);letter-spacing:-.01em;text-decoration:none}
 nav a{margin-left:28px;text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
 nav a:hover{color:var(--accent)}
 
 /* hero */
 .hero{padding:72px 0 56px}
 .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
-h1{font:600 58px/1.05 var(--serif);letter-spacing:-.01em;margin-bottom:20px}
-.lede{font:500 22px/1.45 var(--serif);margin-bottom:20px}
+h1{font:700 60px/1.02 var(--head);letter-spacing:-.03em;margin-bottom:20px}
+.lede{font:500 21px/1.5 var(--head);margin-bottom:20px}
 .hero p.muted{max-width:56ch;margin-bottom:32px}
-.btns a{display:inline-block;padding:11px 22px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;margin-right:12px;border:1.5px solid var(--ink)}
+.btns a{display:inline-block;padding:11px 22px;border-radius:2px;font-weight:600;font-size:15px;text-decoration:none;margin-right:12px;border:1.5px solid var(--ink)}
 .btns a.primary{background:var(--ink);color:#fff}
 .btns a:hover{border-color:var(--accent);background:var(--accent);color:#fff}
 .ph{background:var(--soft);overflow:hidden;position:relative}
 .ph img{display:block;width:100%;height:100%;object-fit:cover}
 .ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:14px;z-index:0}
 .ph img{position:relative;z-index:1}
-.headshot{aspect-ratio:4/5;border-radius:6px}
-.banner{aspect-ratio:21/8;border-radius:6px}
+.headshot{aspect-ratio:4/5;border-radius:2px}
+.banner{aspect-ratio:21/8;border-radius:2px}
 
 /* about */
 .about{display:grid;grid-template-columns:1fr 2fr;gap:64px}
 .about h2{margin:0}
 .about p+p{margin-top:16px}
 .facts{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:6px 24px;font-size:16px}
-.facts dt{color:var(--muted)} .facts dd{margin:0;font-weight:500}
+.facts dt{color:var(--muted);font-family:var(--mono);font-size:14px} .facts dd{margin:0;font-weight:500}
 
 /* projects */
 .project{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid var(--line)}
 .project:nth-of-type(even) .ph{order:2}
-.project .ph{aspect-ratio:3/2;border-radius:6px}
-.project .tools{font-size:14px;color:var(--muted);margin-bottom:16px}
+.project .ph{aspect-ratio:3/2;border-radius:2px}
+.project .tools{font-family:var(--mono);font-size:13.5px;color:var(--muted);margin-bottom:16px}
 .project dl{display:grid;grid-template-columns:auto 1fr;gap:4px 20px;margin-top:20px;font-size:15px}
-.project dt{color:var(--muted)} .project dd{margin:0;font-weight:500}
+.project dt{color:var(--muted);font-family:var(--mono);font-size:13.5px} .project dd{margin:0;font-weight:500}
 .more{color:var(--accent);font-weight:600;text-decoration:none}
 .more:hover{text-decoration:underline}
 
 /* experience */
 .job{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:28px 0;border-top:1px solid var(--line)}
-.job .when{color:var(--muted);font-size:15px}
+.job .when{color:var(--muted);font-family:var(--mono);font-size:14px}
 .job h3{font-size:20px;margin-bottom:2px}
 .job .org{color:var(--muted);margin-bottom:10px}
 .job ul{padding-left:20px} .job li{margin-bottom:4px}
 
 /* gallery */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.gallery figure .ph{aspect-ratio:4/3;border-radius:6px}
+.gallery figure .ph{aspect-ratio:4/3;border-radius:2px}
 .gallery figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 
 /* contact */
 .contact{background:var(--soft)}
 .contact p{max-width:52ch;margin-bottom:24px}
-.contact a.mail{font:600 28px var(--serif);color:var(--accent);text-decoration:none}
+.contact a.mail{font:600 26px var(--head);letter-spacing:-.01em;color:var(--accent);text-decoration:none}
 .contact a.mail:hover{text-decoration:underline}
 .links{margin-top:20px}.links a{margin-right:24px;font-weight:500}
 footer{padding:28px 0;font-size:14px;color:var(--muted)}
